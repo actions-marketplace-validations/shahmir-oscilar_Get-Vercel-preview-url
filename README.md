@@ -2,6 +2,12 @@
 
 > Github Action used to get the `preview url` of a vercel deployment for your continuous integration pipeline. Supports the `pull_request` and `push` workflow triggers.
 
+### Why this action?
+
+Most similar actions look up Vercel deployments by commit SHA alone. That works fine when each branch has unique commits, but breaks down when multiple branches point to the same commit — for example, a **sandbox** and **production** branch that are both up-to-date with each other.
+
+This action filters by **both commit SHA and branch name**, so each branch gets back its own correct preview URL even when they share a commit.
+
 ### Basic usage
 
 Inside your `.github/workflows/{your-workflow}.yml` file:
