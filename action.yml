@@ -1,4 +1,4 @@
-name: 'Get Vercel Preview URL'
+name: 'Get Vercel deployment Preview URL'
 description: 'Get the preview URL of a Vercel deployment'
 branding:
   icon: link

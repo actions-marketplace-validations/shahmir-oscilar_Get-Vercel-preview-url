@@ -1,4 +1,4 @@
-## `Get Vercel Preview Url`
+## `Get Vercel deployment Preview URL`
 
 > Github Action used to get the `preview url` of a vercel deployment for your continuous integration pipeline. Supports the `pull_request` and `push` workflow triggers.
 
@@ -7,7 +7,7 @@
 Inside your `.github/workflows/{your-workflow}.yml` file:
 
 ```yml
-- name: Get Vercel Preview URL
+- name: Get Vercel deployment Preview URL
   id: get-vercel-preview-url
   uses: shahmir-oscilar/Get-vercel-preview-url@2.0.0
   with:
@@ -55,7 +55,7 @@ jobs:
       - name: Create report directory
         run: mkdir -p ${{ github.workspace }}/tmp/artifacts
 
-      - name: Get Vercel Preview URL
+      - name: Get Vercel deployment Preview URL
         id: vercel-deployment
         uses: shahmir-oscilar/Get-Vercel-preview-url@2.0.0
         with:
